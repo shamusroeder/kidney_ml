@@ -2,6 +2,7 @@
 
 import tensorflow as tf 
 import numpy as np
+import shutil
 
 def run_tf_check():
     print("Current tensorflow version =", tf.__version__)
@@ -11,3 +12,5 @@ def run_tf_check():
     print("\nList of detected devices and attributes:\n", 
         tf.python.client.device_lib.list_local_devices())
 
+def unzip_it():
+    shutil.unpack_archive("hubmap-kidney-segmentation.zip")
